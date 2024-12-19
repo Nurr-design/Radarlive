@@ -1,0 +1,677 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* typografi */
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px; 
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;  
+}
+
+p {
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+a {
+    color: white;
+}
+
+/* ######### Header ########## */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    z-index: 10000;
+    width: 95%;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    margin: auto;
+    background-color: rgb(211, 211, 211);
+    border-radius: 80px;
+    padding: 2px 25px;
+    align-items: center;
+    width: 100%;
+}
+
+/*logo*/
+.logo {
+    width: 45px;
+    mix-blend-mode: color-burn;
+    z-index: 1000000;
+}
+
+/*navigation links*/
+.nav {
+    display: none;
+}
+
+.nav > ul {
+    list-style: none;
+    gap: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-list {
+    position: absolute;
+    z-index: 60;
+    display: none;
+    background-color: #dcdcdc;
+    min-width: 150px;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+
+.dropdown-list a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown-list a:hover {
+    background-color: #b4b4b4;
+}
+
+
+/* knap header mobil*/
+.billet-button {
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(105, 7, 166, 0.56) 0%,
+        rgba(234, 14, 226, 0.56) 100%
+    );
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(238, 7, 176, 1);
+    padding: 10px 20px;
+    border-radius: 80px;
+    border-image-slice: 1;
+    height: 50px;
+    box-shadow: var(
+        --drop-shadow-600-box-shadow,
+        0px 16px 32px -8px rgba(12, 12, 13, 0.4)
+    );
+    display: none;
+}
+
+/* søgefelt */
+.search-container {
+    display: none;
+    gap: 5px;
+    justify-content: right;
+    mix-blend-mode: color-burn;
+}
+.search-container input {
+    padding: 5px;
+    border-radius: 80px;
+}
+
+/* burger menu*/
+.burger-menu {
+    display: block;
+}
+
+.burger-menu img {
+    width: 40px;
+}
+
+/* ##################### Hero Section #####################*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    position: relative;
+    overflow: hidden; /* Sikrer at intet går ud over containeren */
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2; /* Sørger for at teksten er ovenpå billedet */
+}
+
+.btn {
+    background: linear-gradient(90deg, rgba(105, 7, 166, 0.56) 0%, rgba(234, 14, 226, 0.56) 100%);
+    color: white;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 80px; /* 80px kant på knappen */
+    text-decoration: none;
+    font-size: 14px;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+    border: 3px solid #8338EC; /* Lilla kant omkring knappen */
+    margin-top: 20px; /* Lægger lidt afstand mellem teksten og knappen */
+}
+
+/* Hover effekt for knappen */
+.btn:hover {
+    background-color: #6a00f4;
+    border-color: #EE07B0;
+}
+
+/* Hero Image */
+.hero-image {
+    left: 50%;
+    transform: translatex(-50%);
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 90%; /* Skalerer billedet så det fylder */
+    height: 90%; /* Justerer højden i forhold til bredden */
+    border-radius: 80px; /* 80px kant på billedet */
+    border: 5px solid #8338EC; /* Lilla kant omkring billedet */
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for at billedet dækker containeren */
+}
+
+
+/* ############## Kortekst ########## */
+.korttekst {
+    text-align: center;
+    padding: 20px 40px;
+}
+
+    /* #### Arrangementer Section #### */
+    .arrangementer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .event-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .event-cards {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        gap: 15px; /* Gør der er afstand mellem kortene */
+    }
+
+    .event-card {
+        position: relative; /* For at lagdele tekst og billede */
+        min-width: 250px;
+        margin: 10px;
+        border-radius: 80px; /* Kortets hjørner */
+        overflow: hidden;
+        flex: none;
+        width: 275px;
+        height: 275px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tilføjer dybde til kortene */
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Sørg for billedet tilpasser kortets dimensioner */
+        border-radius: 80px; /* Billedets hjørner */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Læg billedet bag teksten */
+    }
+
+    .text-overlay {
+        position: absolute; /* Placér teksten over billedet */
+        bottom: 0; /* Teksten placeres i bunden af kortet */
+        left: 0;
+        width: 100%; /* Fyld hele kortets bredde */
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); /* Sort gennemsigtig baggrund */
+        color: white;
+        z-index: 2; /* Sørg for teksten vises over billedet */
+        text-align: center;
+    }
+
+    .text-overlay h3 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .text-overlay p {
+        font-size: 0.9rem;
+        margin: 5px 0 0;
+    }
+
+    /* Scroll Buttons */
+    .event-container button {
+        background: rgba(0, 0, 0, 0.6); /* Sort gennemsigtig baggrund */
+        color: white;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 15px;
+        border-radius: 50%; /* Runde kanter på knapperne */
+        z-index: 3; /* Sørg for knapperne vises over kortene */
+    }
+
+    #scroll-left {
+        left: 10px; /* Placeret til venstre */
+    }
+
+    #scroll-right {
+        right: 10px; /* Placeret til højre */
+    }
+
+/* ################# Newsletter ################# */
+.newsletter {
+    text-align: center;
+    padding: 20px;
+    height: 250px;
+    background: linear-gradient(100deg, #6a00f4, #8338ec, #EE07B0, #178A84, #FF7F00, #EBDF3B, #5800CB);
+    color: #fff;
+    align-content: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 80px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+}
+
+.newsletter button {
+    background-color: #fff;
+    color: #8338ec;
+    border: none;
+    border-radius: 80px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* ################# Footer ############# */
+.footer {
+    background-color: #111; /* Mørk baggrund */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Mobil-først: Vertikal layout */
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer Sections */
+.footer-section {
+    padding: 10px 0;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Links Styling */
+.footer-section.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section.links ul li {
+    margin: 5px 0;
+}
+
+.footer-section.links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section.links ul li a:hover {
+    color: #aaa;
+}
+
+/* Social Icons */
+.footer-section.social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-section.social .social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-section.social .social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+/* ##### Booking Siden ######*/
+.booking-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.billet-oversigt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-self: center;
+    max-width: 95%;
+    padding: 50px 0;
+}
+
+.billet-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.billet-left-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 100px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 20px 30px;
+    justify-content: space-between;
+}
+
+.billet-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 26px;
+    color: black;
+    display: flex;
+    gap: 10px;
+    padding: 35px 50px;
+}
+
+
+.body-img {
+    background-image: url('img/betalings_forside.png');
+}
+
+
+/*######### Desktop ###########*/
+
+/* Desktop Styling */
+@media (min-width: 768px) {
+
+    /* #### typografi ####*/
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    /* #### header #### */
+    .nav {
+        display: flex;
+    }
+
+    .billet-button {
+        display: block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .search-container {
+        display: flex;
+    }
+
+    .event-cards {
+        flex-direction: row;
+    }
+
+    .header-container {
+        padding: 10px 45px;
+    }
+
+    /* #### hero #### */
+    .hero {
+        height: 100vh;
+        justify-content: left;
+    }
+
+    .hero-content {
+        text-align: left;
+        margin-left: 40px;
+    }
+
+.btn {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+        position: relative;
+        margin-left: 0;
+        margin-top: 20px; /* Lægger afstand mellem tekst og knap */
+        border-radius: 80px; /* 80px kant på knappen */
+    }
+
+    .hero-image {
+        width: 95%;
+        height: 95%;
+        position: absolute;
+        top: 0;
+        /*border: 5px solid #8338EC;  Lilla kant omkring billedet */
+        /*border-radius: 80px; /* 80px kant på billedet */
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Sørger for at billedet dækker containeren */
+        object-position: center; /* Sørger for at billedet bliver godt skåret */
+    }
+
+    .hero-content p {
+        margin: 10px 0;
+    }
+
+    .hero-content button {
+        color: white;
+        background: linear-gradient(
+            90deg,
+            rgba(105, 7, 166, 0.56) 0%,
+            rgba(234, 14, 226, 0.56) 100%
+        );
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(238, 7, 176, 1);
+        padding: 10px 20px;
+        border-radius: 80px;
+        border-image-slice: 1;
+        height: 50px;
+    }
+
+    /* ############## Kortekst ########## */
+    .korttekst {
+        padding: 50px 40px;
+    }
+
+    /* #### Arrangementer Section #### */
+    .arrangementer {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .event-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .event-cards {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        gap: 15px; /* Gør der er afstand mellem kortene */
+    }
+
+    .event-card {
+        position: relative; /* For at lagdele tekst og billede */
+        min-width: 250px;
+        margin: 10px;
+        border-radius: 80px; /* Kortets hjørner */
+        overflow: hidden;
+        flex: none;
+        width: 275px;
+        height: 275px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Tilføjer dybde til kortene */
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Sørg for billedet tilpasser kortets dimensioner */
+        border-radius: 80px; /* Billedets hjørner */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Læg billedet bag teksten */
+    }
+
+    .text-overlay {
+        position: absolute; /* Placér teksten over billedet */
+        bottom: 0; /* Teksten placeres i bunden af kortet */
+        left: 0;
+        width: 100%; /* Fyld hele kortets bredde */
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); /* Sort gennemsigtig baggrund */
+        color: white;
+        z-index: 2; /* Sørg for teksten vises over billedet */
+        text-align: center;
+    }
+
+    .text-overlay h3 {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .text-overlay p {
+        font-size: 0.9rem;
+        margin: 5px 0 0;
+    }
+
+    /* Scroll Buttons */
+    .event-container button {
+        background: rgba(0, 0, 0, 0.6); /* Sort gennemsigtig baggrund */
+        color: white;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 15px;
+        border-radius: 50%; /* Runde kanter på knapperne */
+        z-index: 3; /* Sørg for knapperne vises over kortene */
+    }
+
+    #scroll-left {
+        left: 10px; /* Placeret til venstre */
+    }
+
+    #scroll-right {
+        right: 10px; /* Placeret til højre */
+    }
+
+    /* #### Footer ####*/
+    .footer-content {
+        flex-direction: row; /* Desktop: Horisontalt layout */
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        flex: 1; /* Gør sektionerne fleksible */
+        text-align: left; /* Venstrejuster på desktop */
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*#### Booking ####*/
+    .billet-oversigt {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+}
