@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <title>RADAR</title>
+    <link rel="website icon" type="png"
+    href="img/RADAR logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadarLife</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            
+            <!--Nav-->
+            <nav class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="/koncerter.html">Koncerter</a>
+                        <div class="dropdown-list">
+                            <a href="#">Kommende koncerter</a>
+                            <a href="#">Tidligere koncerter</a>  
+                            <a href="#">Billetter og priser</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/frivillig.html">Frivillig</a>
+                        <div class="dropdown-list">
+                            <a href="#">Bliv frivillig</a>
+                            <a href="#">Frivillig i vores arrengementer</a>  
+                            <a href="#">Frivillige fordele</a>
+                            <a href="#">Frivillige FAQ</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/nyheder.html">Nyheder</a>
+                        <div class="dropdown-list">
+                            <a href="#">Seneste opdateringer</a>
+                            <a href="#">Pressemeddelelser</a>  
+                            <a href="#">Radar i medierne</a>
+                            <a href="#">Radar i Aarhus</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/blog.html">Blog</a>
+                        <div class="dropdown-list">
+                            <a href="#">Kunstnerinterviews</a>
+                            <a href="#">Musik og kultur</a>  
+                            <a href="/begivenhedsanmeldelser.html">Begivenhedsanmeldelser</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/støtos.html">Støs os</a>
+                        <div class="dropdown-list">
+                            <a href="#">Bliv medlem</a>
+                            <a href="#">Donationer</a>  
+                            <a href="#">Støtteproggrammer</a>
+                            <a href="#">Corporate partnerskaber</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="/omos.html">Om os</a>
+                        <div class="dropdown-list">
+                            <a href="#">Vores historie</a>
+                            <a href="#">Mission og vision</a>  
+                            <a href="#">Mød teamet</a>
+                            <a href="#">Kontakt os</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Logo-->
+            <a href="/index.html"><img src="img/RADAR logo.jpg" alt="RadarLife Logo" class="logo"></a>
+            
+            <!--Knap-->
+            <button class="billet-button">Find Billet</button>
+            
+            <!--Søg-->
+            <div class="search-container">
+                <input type="text" placeholder="Søg her...">
+                <button>🔍</button>
+            </div>
+        <!--Burgermenu-->    
+            <div class="burger-menu">
+                <img src="img/burger-menu.svg" alt="">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="img/radar forside billede.jpg" alt="radar" class="hero-image">
+        <div class="hero-content">
+            <h1>Velkommen til RADAR</h1>
+            <a href="#" class="btn">Se arrangementerne</a>
+        </div>
+    </section>
+
+ <!-- kort tekst -->
+ <section class="korttekst">
+    <h2>Oplev Musikens Verden</h2>
+    <p>Hold dig opdateret på de nyeste koncerter og events i din by. Oplev unikke musikalske samarbejder og eksklusive liveoptrædener. Bliv en del af et dynamisk musikmiljø med masser af inspiration og uforglemmelige oplevelser.</p>
+</section>
+
+<!-- Kommende arrangementer -->
+<section class="arrangementer">
+    <h2>Kommende Arrangementer</h2>
+    <div class="event-container">
+        <button id="scroll-left">←</button>
+        <div class="event-cards">
+            <a href="/karmen-abelkjaer.html" class="event-card">
+                <img src="img/Karmen x Abekejser x UK Horns.png" alt="Event 1">
+                <div class="text-overlay">
+                    <h3>KARMEN x ABELKJÆR x UK HORNS</h3>
+                    <p>10. DEC</p>
+                </div>
+            </a>
+            <a href="/karmen-abelkjaer.html" class="event-card">
+                <img src="img/Aarhus Drag Extravaganza vol. 3.png" alt="Event 2">
+                <div class="text-overlay">
+                    <h3>Aarhus Drag Extravaganza Vol. 3</h3>
+                    <p>25. DEC</p>
+                </div>
+            </a>
+            <a href="/karmen-abelkjaer.html" class="event-card">
+                <img src="img/guzo.png" alt="Event 3">
+                <div class="text-overlay">
+                    <h3>GUZO</h3>
+                    <p>4. FEB</p>
+                </div>
+            </a>
+            <a href="/karmen-abelkjaer.html" class="event-card">
+                <img src="img/Bissesvinet.png" alt="Event 4">
+                <div class="text-overlay">
+                    <h3>BISSESVINET</h3>
+                    <p>14. FEB</p>
+                </div>
+            </a>
+            <a href="/karmen-abelkjaer.html" class="event-card">
+                <img src="img/Nikolaj Nørlund (SOLO).png" alt="Event 5">
+                <div class="text-overlay">
+                    <h3>Nikolaj Nørlund (SOLO)</h3>
+                    <p>16. MAJ</p>
+                </div>
+            </a>
+        </div>
+        <button id="scroll-right">→</button>
+    </div>
+</section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Tilmeld dig vores nyhedsbrev</h2>
+        <p>Hold dig opdateret med de seneste nyheder og arrangementer.</p>
+        <form>
+            <input type="email" placeholder="Indtast din email">
+            <button>Tilmeld dig her</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Om Os</h3>
+                <p>
+                    Vi skaber unikke oplevelser gennem kultur og musik. Følg os på sociale medier for de nyeste opdateringer.
+                </p>
+            </div>
+            <div class="footer-section links">
+                <h3>Hurtige Links</h3>
+                <ul>
+                    <li><a href="#home">Hjem</a></li>
+                    <li><a href="#events">Arrangementer</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Følg Os</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="img/facebook-icon.svg" alt="Facebook"></a>
+                    <a href="#"><img src="img/instagram-icon.svg" alt="Instagram"></a>
+                    <a href="#"><img src="img/twitter-icon.svg" alt="Twitter"></a>
+                    <a href="#"><img src="img/youtube-icon.svg" alt="Youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 KulturEvent. Alle rettigheder forbeholdes.</p>
+        </div>
+    </footer>    
+    <script src="scripts.js"></script>
+</body>
+</html>
